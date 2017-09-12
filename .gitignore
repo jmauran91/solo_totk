@@ -18,3 +18,7 @@
 /public/packs
 /public/packs-test
 /node_modules
+
+# Ignore ENV file
+
+.env
