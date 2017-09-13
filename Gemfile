@@ -44,6 +44,9 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
 
+group :assets do
+  gem 'foundation-rails'
+end
 
 
 group :development, :test do
