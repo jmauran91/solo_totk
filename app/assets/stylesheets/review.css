@@ -1,7 +1,6 @@
-@import "settings";
 
 .review {
-  border-color: $white;
+  border-color: white;
   border-radius: 10px;
   border-style: solid;
   margin: 1em;
@@ -20,7 +19,7 @@
 
 .num-votes {
   border-style: solid;
-  border-color: $white;
+  border-color: white;
   font-weight: bold;
   text-align: center;
   margin: 10px;

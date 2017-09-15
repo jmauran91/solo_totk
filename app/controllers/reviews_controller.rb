@@ -17,7 +17,6 @@ class ReviewsController < ApplicationController
       @review.user = current_user
       @review.release = @release
       if @review.save
-        ReviewMailer.new_review(@review).deliver_later
         flash[:notice] = "Review was added successfully."
         redirect_to release_path(@release)
       else

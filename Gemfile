@@ -38,7 +38,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'launchy'
-gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'

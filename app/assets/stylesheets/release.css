@@ -1,4 +1,6 @@
-@import "settings";
+.welcome {
+  color: white;
+}
 
 .genres {
   z-index: 2;
@@ -19,21 +21,23 @@
 }
 
 .release-form {
-  background-color: $white;
+  background-color: white;
   border-radius: 10px;
-  color: $black;
+  color: black;
   padding: 2em;
   margin-top: 2em;
-
-  label {
-    color: $black;
-  }
 }
 
-.release-label {
-  a, p {
+.release-form  label {
+    color: black;
+}
+
+.release-label a {
+  display: inline-block;
+}
+
+.release-label p {
     display: inline-block;
-  }
 }
 
 .release-header {
