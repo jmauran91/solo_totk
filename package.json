@@ -1,6 +1,6 @@
 {
   "scripts": {
-  "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p && bundle exec rake assets:precompile"
+  "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p"
 
   },
   "dependencies": {
