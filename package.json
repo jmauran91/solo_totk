@@ -1,6 +1,5 @@
 {
   "scripts": {
-  "postinstall": "npm install",
   "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p"
 
   },
