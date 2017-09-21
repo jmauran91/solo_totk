@@ -33,7 +33,7 @@ h1 {
 
 .topbar_ul_left {
   list-style-type: none;
-  display; inline;
+  display: inline;
 }
 
 .topbar_ul_left li {
