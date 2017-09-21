@@ -1,0 +1,14 @@
+{
+  "name": "solo-retry-totk",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/jmauran91/solo_totk",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

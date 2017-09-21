@@ -1,0 +1,51 @@
+<div class="row small-centered">
+  <h1> <%=@release.title %> by <%= @release.artist %> </h1>
+</div>
+
+<div class="release_container">
+  <div class="release_picture">
+    <img src="<%=@release.album_art_url%>" height="400" width="400"/>
+    <% if current_user == @release.user || current_user.try(:is_admin?)%>
+    <div class="row">
+      <%= link_to "Edit", edit_release_path(@release) %>
+    </div>
+    <% end %>
+  </div>
+  <div class="release_info_div">
+    <% unless @release.performer.empty? %>
+      <h4 class="release_info_header">Performed By: <%= @release.performer %></h4>
+    <% end %>
+
+    <h4 class="release_info_header">Year: <%= @release.year %></h4>
+
+    <% unless @release.studio.empty? %>
+      <h4 class="release_info_header">Studio: <%= @release.studio %></h4>
+    <% end %>
+
+    <h4 class="release_info_header">No. of Tracks: <%= @release.no_of_tracks %></h4>
+
+    <% unless @release_genres.empty? %>
+      <h4 class="release_info_header">Genre(s): </h4>
+      <% @release_genres.each do |genre| %>
+        | <%= link_to genre.name, genre_path(genre) %> |
+      <% end %>
+    <% end %>
+
+    <% unless @release.description.empty? %>
+    <h4 class="release_info_header"> Description: </h4>
+    <p><%= @release.description %></p>
+    <% end %>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+ <div class="add_review">
+  <p>
+    <%= link_to 'Add a Review', new_release_review_path(@release) %>
+  </p>
+  <%= react_component("ReviewContainer", props: { id: request.fullpath[-1] }) %>
+</div>

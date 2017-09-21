@@ -1,0 +1,79 @@
+
+.flash {
+  background-color: primary-color;
+  color: white;
+  font-size: 20px;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.top-bar {
+  height: 70px;
+  width: auto;
+  text-align: center;
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Michroma', sans-serif;
+  justify-content: center;
+  text-align: center;
+}
+
+.top-bar-left {
+  float: left;
+  display: inline;
+  width: 700px;
+}
+
+.top-bar-right {
+  float: right;
+  display: block;
+}
+
+.topbar_ul_left {
+  list-style-type: none;
+  display; inline;
+}
+
+.topbar_ul_left li {
+  float: left;
+  margin: 0px 16px;
+}
+
+.topbar_ul_left li a {
+  color: red;
+  font-family: 'Michroma', sans-serif;
+  text-decoration: none !important;
+
+}
+
+.menu_right {
+  list-style-type: none;
+}
+
+.menu_right li {
+  float: right;
+  margin: 0px 16px;
+}
+
+.menu_right li a {
+  color: red;
+  font-family: 'Michroma', sans-serif;
+  text-decoration: none !important;
+
+}
+
+.menu-text li {
+  float: left;
+}
+
+
+.body-background {
+  background-image: url('/assets/wave_red_lines_light_20065_1920x1080.jpg');
+  z-index: 1;
+}
+
+#app {
+  z-index: 999;
+}

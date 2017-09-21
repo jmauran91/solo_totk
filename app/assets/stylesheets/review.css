@@ -1,0 +1,54 @@
+
+.review {
+  border-color: white;
+  border-radius: 10px;
+  border-style: solid;
+  margin: 0 auto;
+  padding: 1em;
+  width: 60vw;
+}
+
+.votes  {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.review-text {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.num-votes {
+  border-style: solid;
+  border-color: white;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+.downvote, .upvote {
+  text-align: center;
+}
+
+.downvote_arrow, .upvote_arrow {
+  color: white;
+}
+
+.review_rating {
+  color: white;
+  font-family: 'Michroma', sans-serif;
+}
+
+.review_body {
+  color: white;
+  font-family: 'Michroma', sans-serif;
+
+}
+
+.add_review {
+  width: 20em;
+  margin-left: 20vw;
+  margin-right: 40vw;
+}

@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="release-header">
+    <h1 class="small-12 large-8 small-centered"> Add Your Own Review </h1>
+  </div>
+</div>
+
+<div class="release_container">
+  <div class="release_picture">
+    <img src="<%=@release.album_art_url%>" height="400" width="400"/>
+  </div>
+  <div class="release_info_div">
+    <% unless @release.performer.empty? %>
+      <h4 class="release_info_header">Performed By: <%= @release.performer %></h4>
+    <% end %>
+
+    <h4 class="release_info_header">Year: <%= @release.year %></h4>
+
+    <% unless @release.studio.empty? %>
+      <h4 class="release_info_header">Studio: <%= @release.studio %></h4>
+    <% end %>
+
+    <h4 class="release_info_header">No. of Tracks: <%= @release.no_of_tracks %></h4>
+
+    <% unless @release_genres.empty? %>
+      <h4 class="release_info_header">Genre(s): </h4>
+      <% @release_genres.each do |genre| %>
+        | <%= link_to genre.name, genre_path(genre) %> |
+      <% end %>
+    <% end %>
+
+    <% unless @release.description.empty? %>
+    <h4 class="release_info_header"> Description: </h4>
+    <p><%= @release.description %></p>
+    <% end %>
+
+  </div>
+</div>
+<div class="row">
+  <% if @review.errors.any? %>
+    <div id="error_explanation" class="callout warning">
+      <h5><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h5>
+
+      <ul class="no-bullet">
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="release-form">
+    <%= form_for [ @release, @review ] do |f| %>
+      <div class="field">
+        <%= f.label :rating %> <br />
+        <%= f.text_field :rating %>
+      </div>
+
+      <div class="field">
+        <%= f.label :body %><br />
+        <%= f.text_field :body, style: 'width: 90%; height: 4em; margin-bottom: 1em; display: block' %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Add"%>
+      </div>
+    <% end %>
+
+    <p>
+    <%= link_to 'Home', root_path %>
+    </p>
+
+  </div>
+
+</div>

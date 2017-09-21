@@ -1,0 +1,36 @@
+
+.devise-new {
+  border-style: inset;
+  margin-top: 2em;
+  padding: 2em;
+  background: black;
+  color: white;
+}
+
+#devise_new_registration label{
+  color: white;
+}
+
+
+#registration_header {
+  color: white;
+}
+
+#error_explanation h2{
+
+    font-family: secondary-font-family;
+    font-size: 1.3rem;
+  }
+
+
+#error_explanation  ul {
+      list-style: none;
+}
+
+.user_reviews {
+  color: white;
+}
+
+.user_releases {
+  color: white;
+}
