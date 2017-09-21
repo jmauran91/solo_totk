@@ -7,7 +7,6 @@
 }
 
 .slider-banner {
-  background-color: $black;
   margin-bottom: 4em;
   opacity: 0.9;
   text-align: center;
@@ -42,14 +41,12 @@
 }
 
 .release-header {
-  color: $white;
   font-weight: bold;
   padding: 2em;
   text-align: center;
 }
 
 #error_explanation {
-  font-family: $secondary-font-family;
   font-size: 20px;
   text-align: center;
 }
@@ -76,7 +73,6 @@
 }
 
 .check-boxes {
-  font-family: $secondary-font-family;
 }
 
 .check-box-and-label {
