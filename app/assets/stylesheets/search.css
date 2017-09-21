@@ -1,0 +1,19 @@
+.search-tile-text {
+  margin: 300px 0px;
+  color: white;
+}
+
+.search-tile {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-tile-img {
+  max-height: 600px;
+  max-width: 600px;
+}
+
+.search-tile-img img {
+  height: 100%;
+  width: 100%;
+}

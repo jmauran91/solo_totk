@@ -15,10 +15,11 @@ class ReviewContainer extends Component {
   }
 
   componentDidMount() {
-    let id = this.props.params.id
+    let id = this.props.id
     fetch(`/api/v1/releases/${id}/reviews`)
       .then(response => response.json())
       .then(responseData => {
+        console.log(responseData)
         this.setState({ reviews: responseData })
       })
   }
@@ -96,17 +97,17 @@ class ReviewContainer extends Component {
             <DownVote
               downVoteHandler={downVoteChangeHandler}
               />
-          </div>
-          <Review
-          key={review.id}
-          id={review.id}
-          releaseId={this.props.params.id}
-          rating={review.rating}
-          body={review.body}
-          votes={review.votes}
-          />
+            </div>
+            <Review
+            key={review.id}
+            id={review.id}
+            releaseId={this.props.id}
+            rating={review.rating}
+            body={review.body}
+            votes={review.votes}
+            />
 
-      </div>
+          </div>
         )
       })
     return (

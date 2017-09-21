@@ -21,7 +21,7 @@
       <ul class="menu vertical nested">
         <% @user_releases.each do |release| %>
           <li>
-            <p>
+            <p class="user_releases">
               <%= release.updated_at.strftime("%B %d ") %>:  <%= @user.username %>
               posted a release: <%= link_to release.title, release_path(release) %>
             </p>
@@ -35,7 +35,7 @@
 
         <% @user_reviews.each do |review| %>
           <li>
-            <p>
+            <p class="user_reviews">
               <%= review.updated_at.strftime("%B %d ") %>:  <%= @user.username %>
               posted a review for <%= link_to review.release.title, release_path(review.release) %> by <%= review.release.artist %>
             </p>

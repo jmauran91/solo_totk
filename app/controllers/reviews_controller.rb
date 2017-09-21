@@ -13,9 +13,8 @@ class ReviewsController < ApplicationController
   def create
     @release = Release.find(params[:release_id])
     if current_user
-      @review = Review.new(review_params)
+      @review = @release.reviews.build(review_params)
       @review.user = current_user
-      @review.release = @release
       if @review.save
         flash[:notice] = "Review was added successfully."
         redirect_to release_path(@release)

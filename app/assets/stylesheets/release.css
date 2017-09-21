@@ -25,7 +25,8 @@
   border-radius: 10px;
   color: black;
   padding: 2em;
-  margin-top: 2em;
+  margin: 2em auto 0;
+  width: 600px;
 }
 
 .release-form  label {
@@ -53,8 +54,21 @@
   text-align: center;
 }
 
+.release-tile-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1300px;
+  justify-content: flex-start;
+
+}
+
 .release-tile {
+  margin: 8vh 15px;
+  display: inline;
   text-align: center;
+  color: white;
 }
 
 .heading {
@@ -70,5 +84,45 @@
 }
 
 .welcome {
-  margin: 3rem;
+  margin: 3em;
+}
+
+.release-label-text {
+  text-decoration: none !important;
+  font-family: 'Michroma', sans-serif;
+  color: white;
+}
+
+.small-centered {
+  color: white;
+}
+
+.release_container {
+  display: flex;
+  max-width: 75rem;
+  margin-right: 8rem;
+  margin-left: auto;
+  height: 400px;
+  margin-bottom: 10em;
+}
+
+.release_picture {
+  width: auto;
+  float: left;
+  margin: 2em 4em;
+}
+
+.release_info_div {
+  width: 400px;
+  float: right;
+  margin-top: 4em;
+  margin-right: 16em;
+}
+
+.release_info_div h4 {
+  color: white;
+}
+
+.release_info_header {
+  font-family: 'Michroma', sans-serif;
 }

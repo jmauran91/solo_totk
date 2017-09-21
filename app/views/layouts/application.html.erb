@@ -19,43 +19,45 @@
 
   <body class="body-background">
     <div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><%= link_to "Kensai Music DB", root_path %></li>
-      <li>
-        <a href="#">Releases by genre</a>
-        <ul class="menu vertical genres">
-          <% genres = Genre.all %>
-          <% genres.each do |genre|  %>
-            <l1><%= link_to genre.name, (genre) %></l1><br />
-          <% end %>
+      <div class="top-bar-left">
+        <ul class="topbar_ul_left" data-dropdown-menu>
+          <li class="menu-text"><%= link_to "Kensai Music DB", root_path %></li>
+          <li>
+            <div class="genre">
+              <a href="#">Releases by genre </a>
+              <ul class="genre-dropdown">
+                <% genres = Genre.all %>
+                <% genres.each do |genre|  %>
+                  <li class="genre-dropdown-content"><%= link_to genre.name, (genre) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </li>
+          <li><%= link_to "Add a Release", new_release_path%></li>
         </ul>
-      </li>
-      <li><%= link_to "Add a Release", new_release_path%></li>
-    </ul>
-  </div>
+      </div>
 
-  <div class="top-bar-right">
-    <ul class="menu">
-        <% if user_signed_in? %>
-          <li><%= link_to "My Profile", user_path(current_user) %> </li>
-          <% if current_user.is_admin? %>
-            <li><%= link_to "Admin", users_path %></li>
-          <% end %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
-        <li>
-          <%= form_tag(releases_path, method: :get) do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search Artists" %>
-            <%= submit_tag 'Search', name: nil %>
-          <% end %>
-        </li>
-    </ul>
-  </div>
-</div>
+      <div class="top-bar-right">
+        <ul class="menu_right">
+            <% if user_signed_in? %>
+              <li><%= link_to "My Profile", user_path(current_user) %> </li>
+              <% if current_user.is_admin? %>
+                <li><%= link_to "Admin", users_path %></li>
+              <% end %>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
+            <li>
+              <%= form_tag(releases_path, method: :get) do %>
+                <%= text_field_tag :search, params[:search], placeholder: "Search Artists" %>
+                <%= submit_tag 'Search', name: nil %>
+              <% end %>
+            </li>
+        </ul>
+      </div>
+    </div>
 <% if flash.any? %>
   <div class="flash">
     <div class="container">

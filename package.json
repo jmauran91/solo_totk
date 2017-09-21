@@ -1,6 +1,8 @@
 {
   "scripts": {
-  "postinstall": "cd client && npm install"
+  "postinstall": "npm install",
+  "heroku-postbuild": "NODE_ENV=production npm run webpack -- -p"
+
   },
   "dependencies": {
     "@rails/webpacker": "^3.0.1",

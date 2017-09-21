@@ -11,6 +11,14 @@ class UsersController < ApplicationController
     @user_reviews = Review.where("user_id = #{@user.id}").order(updated_at: :desc)
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+
+  end
+
   def destroy
     user = User.find(params[:id])
     Review.delete_all("user_id = '#{params[:id]}'")

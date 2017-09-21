@@ -16,8 +16,6 @@ class ReleasesController < ApplicationController
   def show
     @release = Release.find(params[:id])
     @release_genres = @release.genres
-    @reviews = @release.reviews
-    @review = Review.new
   end
 
   def new

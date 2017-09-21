@@ -26,3 +26,11 @@
 #error_explanation  ul {
       list-style: none;
 }
+
+.user_reviews {
+  color: white;
+}
+
+.user_releases {
+  color: white;
+}

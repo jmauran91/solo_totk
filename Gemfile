@@ -42,6 +42,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'pry'
+gem 'rails_12factor', group: :production
 
 group :assets do
   gem 'foundation-rails'
