@@ -20,9 +20,11 @@ h1 {
 }
 
 .top-bar-left {
+  position: relative;
   float: left;
   display: inline;
   width: 700px;
+  height: 100%;
 }
 
 .top-bar-right {
@@ -33,11 +35,12 @@ h1 {
 .topbar_ul_left {
   list-style-type: none;
   display: inline;
+  height: 100%;
 }
 
 .topbar_ul_left li {
   float: left;
-  margin: 0px 16px;
+  margin: 10px 16px 0px;
 }
 
 .topbar_ul_left li a {
