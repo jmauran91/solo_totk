@@ -33,14 +33,16 @@ h1 {
 }
 
 .topbar_ul_left {
+  position: relative;
   list-style-type: none;
   display: inline;
   height: 100%;
+  width: 700px;
 }
 
 .topbar_ul_left li {
   float: left;
-  margin: 10px 16px 0px;
+  margin: 16px 16px 0px;
 }
 
 .topbar_ul_left li a {

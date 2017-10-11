@@ -1,5 +1,6 @@
 .welcome {
   color: white;
+  margin: 1em auto 3em;
 }
 
 .genres {
@@ -77,10 +78,6 @@
 
 .check-box-and-label {
   display: inline-block;
-}
-
-.welcome {
-  margin: 3em;
 }
 
 .release-label-text {

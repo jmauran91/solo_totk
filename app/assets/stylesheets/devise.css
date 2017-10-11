@@ -1,10 +1,15 @@
 
 .devise-new {
   border-style: inset;
-  margin-top: 2em;
+  margin: 2em auto 0;
   padding: 2em;
   background: black;
   color: white;
+  width: 60vw;
+}
+
+.devise-new .field {
+  margin: 3vh auto;
 }
 
 #devise_new_registration label{
