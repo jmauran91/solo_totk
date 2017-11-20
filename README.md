@@ -18,12 +18,8 @@ functionality of the original project.
 Rails 5.0.6
 React on Rails Experiment as per Shakacode
 
-* System dependencies
-
 * Configuration
 default as per Shakacode
 
 * Database creation
 Postgresql
-
-* ...
