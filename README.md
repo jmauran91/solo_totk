@@ -1,5 +1,7 @@
 # README
 
+See the app work at: http://group-project-totk2.herokuapp.com
+
 This Repository is a rehabilitation of the
 [Kensai Music DB](https://github.com/jmauran91/GroupProject_tOtK)
 project. The problem with the original publication of this project is
